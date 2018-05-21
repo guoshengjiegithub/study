@@ -2,13 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>cn.guoshengjie.springmvc</groupId>
-  <artifactId>springmvc</artifactId>
+  <artifactId>study</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>springmvc Maven Webapp</name>
+  <name>study</name>
   <url>http://maven.apache.org</url>
      <properties>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springversion>4.2.0.RELEASE</springversion>
         <junitversion>3.8.1</junitversion>
@@ -149,7 +148,4 @@
         </dependency>
   	
   </dependencies>
-  <build>
-    <finalName>springmvc</finalName>
-  </build>
 </project>
