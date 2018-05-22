@@ -146,6 +146,15 @@
             <artifactId>commons-logging</artifactId>
             <version>1.1</version>
         </dependency>
-  	
   </dependencies>
+  <build>
+  	<plugins>
+  		<plugin>
+  			<artifactId>maven-war-plugin</artifactId>
+  			<configuration>
+  				<version>2.3</version>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
 </project>
