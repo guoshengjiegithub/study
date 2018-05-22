@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+	<context:component-scan base-package="cn.spring" />
+	<!-- 属性注入 -->
+	<bean id="users_property" class="cn.spring.bean.Users">
+		<property name="id" value="1" />
+		<property name="name" value="gsj" />
+		<property name="pwd" value="aaaaaa" />
+		<property name="province">
+			<ref bean="pro1"/>
+		</property>
+	</bean>
+	<!-- 构造器注入 -->
+	<bean id="users_constructor" class="cn.spring.bean.Users">
+		<constructor-arg value="2" type="int" />
+		<constructor-arg value="gsj1" type="java.lang.String" />
+		<constructor-arg value="bbbb" type="java.lang.String" />
+		<constructor-arg type="java.util.List">
+			<list>
+				<ref bean="pro1"/>
+				<ref bean="pro2"/>
+			</list>
+		</constructor-arg>
+		<constructor-arg type="java.util.Map">
+			<map>
+				<entry key="aa" value-ref="pro1"></entry>
+				<entry key="bb" value-ref="pro2"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="pro1" class="cn.spring.bean.Province">
+		<property name="id" value="111"></property>
+		<property name="province" value="北京"></property>
+	</bean>
+	<bean id="pro2" class="cn.spring.bean.Province">
+		<property name="id" value="112"></property>
+		<property name="province" value="上海"></property>
+	</bean>
+
+
+</beans>
