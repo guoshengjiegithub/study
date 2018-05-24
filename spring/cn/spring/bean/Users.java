@@ -3,7 +3,9 @@ package cn.spring.bean;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class Users {
 
 	private int id;
@@ -114,6 +116,14 @@ public class Users {
 	}
 	public void setDate(String date) {
 		this.date = date;
+	}
+	
+	public void init(){
+		System.out.println("init");
+	}
+	
+	public void destory(){
+		System.out.println("destory");
 	}
 
 }

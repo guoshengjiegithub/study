@@ -22,7 +22,7 @@
 		</property>
 	</bean>
 	<!-- 构造器注入 -->
-	<bean id="users_constructor" class="cn.spring.bean.Users">
+	<bean id="users_constructor" class="cn.spring.bean.Users" init-method="init" destroy-method="destory">
 		<constructor-arg value="2" type="int" />
 		<constructor-arg value="${name}" type="java.lang.String" />
 		<constructor-arg value="bbbb" type="java.lang.String" />
@@ -47,6 +47,21 @@
 		<property name="id" value="112"></property>
 		<property name="province" value="上海"></property>
 	</bean>
+	
+<!-- 	<bean id="postProcessor" class="cn.spring.bean.outher.BeanPostProcessTest"/> -->
 
-
+<!-- 	静态工厂方法配置 -->
+	<bean id="staticFactoryBean" class="cn.spring.bean.StaticFactoryBean" factory-method="getInstance">
+		<constructor-arg value="aaa"></constructor-arg>
+	</bean>
+	
+<!-- 	实例工厂方法 -->
+	<bean id="instanceFactoryBean" class="cn.spring.bean.InstanceFactoryBean" ></bean>
+	<bean id="pro3" factory-bean="instanceFactoryBean" factory-method="getInstance">
+		<constructor-arg value="aaa"></constructor-arg>
+	</bean>
+	
+	<bean id="provinceFactoryBean" class="cn.spring.bean.ProvinceFactoryBean">
+		<property name="id" value="111"></property>
+	</bean>
 </beans>
