@@ -6,7 +6,9 @@ import org.springframework.stereotype.Component;
 public class User {
 
 	private String id;
-
+	private String name;
+	private String address;
+	private String email;
 	public String getId() {
 		return id;
 	}
@@ -28,9 +30,7 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	private String name;
-	private String address;
-	private String email;
+
 
 	public String getName() {
 		return name;

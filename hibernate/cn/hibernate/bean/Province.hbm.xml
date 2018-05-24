@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!--class name:持久化类的路径 table：对应数据库表名 schema：数据库schema的名称 -->
+	<class name="cn.hibernate.bean.Province" table="province" schema="test01">
+		<!--column：数据库表的主键这段的名字 name：持久化类的标识属性的名字 type：标识Hibernate类型的名字 -->
+		<id name="id" type="int">
+			<column name="ID" length="32" />
+			<generator class="native" />
+		</id>
+		<property name="province" type="java.lang.String">
+			<column name="PROVINCE" length="20" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

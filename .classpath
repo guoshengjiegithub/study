@@ -8,16 +8,16 @@
 	</classpathentry>
 	<classpathentry including="**/*.java" kind="src" path="src/main/resources"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
-	<classpathentry kind="src" path="springmvc"/>
-	<classpathentry kind="src" path="spring"/>
-	<classpathentry kind="src" path="struts2"/>
-	<classpathentry kind="src" path="mybatis"/>
-	<classpathentry kind="src" path="hibernate"/>
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="springmvc"/>
+	<classpathentry kind="src" path="spring"/>
+	<classpathentry kind="src" path="struts2"/>
+	<classpathentry kind="src" path="mybatis"/>
+	<classpathentry kind="src" path="hibernate"/>
 	<classpathentry kind="src" path="outher"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
@@ -30,5 +30,8 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="D:/tomcat/apache-tomcat-7.1.67/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat/apache-tomcat-7.1.67/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat/apache-tomcat-7.1.67/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

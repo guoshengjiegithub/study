@@ -16,6 +16,10 @@ public class Province {
 	public int getId() {
 		return id;
 	}
+	public Province(String province) {
+		super();
+		this.province = province;
+	}
 	public void setId(int id) {
 		this.id = id;
 	}
