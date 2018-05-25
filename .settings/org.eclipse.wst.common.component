@@ -13,6 +13,7 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/" source-path="/WebRoot"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/MQ"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/thread"/>
         <property name="java-output-path" value="/springmvc/target/classes"/>
         <property name="context-root" value="study"/>
     </wb-module>

@@ -20,6 +20,7 @@
 	<classpathentry kind="src" path="hibernate"/>
 	<classpathentry kind="src" path="outher"/>
 	<classpathentry kind="src" path="MQ"/>
+	<classpathentry kind="src" path="thread"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
