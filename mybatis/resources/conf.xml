@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+<properties resource="resources/db.properties"></properties>
+	<!-- 配置实体类的别名 -->
+	<typeAliases>
+		<package name="cn.mybatis.bean" />
+	</typeAliases>
+	<!-- default:开发模式 work:工作模式 -->
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${db.driver}" />
+				<property name="url" value="${db.url}" />
+				<property name="username" value="${db.username}" />
+				<property name="password" value="${db.password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<!-- 配置文件 -->
+	<mappers>
+<!-- 		<mapper resource="cn/mybatis/dao/UsersMapper.xml" /> -->
+<!-- 		<mapper resource="cn/mybatis/dao/ProvinceMapper.xml" /> -->
+<!-- 		<mapper class="cn.mybatis.dao.UsersDao" />  需要使用注解-->
+		<package name="cn.mybatis.dao"/>
+	</mappers>
+</configuration>

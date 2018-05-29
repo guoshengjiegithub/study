@@ -1,5 +1,6 @@
 package cn.thread.test;
 
+
 public class ThreadTest1 extends Thread{
 
 	public static void main(String[] args) {
@@ -15,6 +16,18 @@ public class ThreadTest1 extends Thread{
 	
 	@Override
 	public void run() {
+//		ExecutorService newCachedThreadPool = Executors.newCachedThreadPool();
+//		Semaphore semaphore=new Semaphore(4);
+//		semaphore.acquire();
+//		semaphore.release();
+//		newCachedThreadPool.execute(new Runnable() {
+//			@Override
+//			public void run() {
+//					
+//			}
+//		});
+//		newCachedThreadPool.shutdown();
+		
 		for(int i=0;i<=5;i++){
 			System.out.println(name+"==>"+i);
 			try {

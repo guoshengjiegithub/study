@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace="" 相当于ID 使用接口的全类名 使用接口示编程 -->
+<mapper namespace="cn.mybatis.dao.ProvinceMapper">
+	<select id="getAll" resultType="Users">
+		select * from users
+	</select>
+	
+	<select id="getById" parameterType="int" resultType="Users">
+		select * from users where id = #{id}
+	</select>
+
+	<insert id="insert"  useGeneratedKeys="true" keyProperty="id">
+		insert into province values(#{id},#{province})
+	</insert>
+	
+	<insert id="update">
+		update province set province=#{province} where id=#{id}
+	</insert>
+	
+	<insert id="delete">
+		delete from province where id=#{id}
+	</insert>
+	
+</mapper>
